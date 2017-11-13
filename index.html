@@ -42,19 +42,6 @@
         <div class="product">
             <ul>
                 <!--dig-->
-                <!--<li>-->
-                    <!--<div class="left"></div>-->
-                    <!--<div class="right">-->
-                        <!--<div class="title">-->
-                            <!--双十一必看： 天猫双11大促抢红包、购物补贴券 正式开启-->
-                            <!--<span>领天猫津贴 超级红包</span>-->
-                        <!--</div>-->
-                        <!--<div class="other clearfix">-->
-                            <!--<span class="mall fl">天猫商城| 11-06 20:00</span>-->
-                            <!--<span class="comment fa fa-commenting-o">1</span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</li>-->
             </ul>
         </div>
         
@@ -83,12 +70,23 @@
 <!--nav渲染-->
 <script type="text/html" id="tpl">
     {{each result v i}}
-    <li>
-        <a href="#">
+    <% if(i<=7){%>
+    <li class="index{{i}}">
+        <a href="javascript:;">
+            <!--<%- v.img%>-->
             <img src={{v.img}} alt="">
             <p>{{v.name}}</p>
         </a>
     </li>
+    <%}else{%>
+    <li class="hide">
+        <a href="javascript:;">
+            <!--<%- v.img%>-->
+            <img src={{v.img}} alt="">
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+    <% } %>
     {{/each}}
 </script>
 
@@ -104,7 +102,7 @@
             </div>
             <div class="other clearfix">
                 <span class="mall fl">{{v.productFrom}}| {{v.productTime}}</span>
-                <span class="comment fa fa-commenting-o">{{v.productComCount}}</span>
+                <span class="comment fa fa-commenting-o">&nbsp;{{v.productComCount}}</span>
             </div>
         </div>
     </li>
@@ -112,7 +110,7 @@
 </script>
 
 <!---->
-
+<script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="js/utils.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>

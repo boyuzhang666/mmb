@@ -79,13 +79,17 @@
   padding-bottom: 0.2rem;
   text-align: center;
 }
+.content .nav > ul li.hide {
+  display: none;
+}
 .content .nav img {
   width: 2.8rem;
   height: 2.8rem;
   margin: 0 auto;
 }
 .content .nav p {
-  font-size: 0.32rem;
+  font-size: 0.52rem;
+  margin-top: 0.2rem;
 }
 .content .recommended {
   width: 100%;
@@ -99,7 +103,7 @@
 .content .recommended span {
   height: 1.2rem;
   line-height: 1.2rem;
-  font-size: 0.56rem;
+  font-size: 0.72rem;
 }
 .content .product li {
   height: 5.2rem;
@@ -122,7 +126,8 @@
   position: relative;
 }
 .content .product .title {
-  font-size: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 700;
   margin-top: 0.6rem;
 }
 .content .product .title span {
@@ -134,11 +139,12 @@
   line-height: 0.4rem;
   position: absolute;
   bottom: 1rem;
-  font-size: 0.4rem;
+  font-size: 0.52rem;
 }
 .content .product .other .comment {
   float: right;
-  margin-right: 0.2rem;
+  font-size: 0.52rem;
+  margin-right: 0.6rem;
 }
 .content .more {
   width: 90%;
